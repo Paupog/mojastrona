@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font/Y224-2vdae.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+}
 
   body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: black;
@@ -25,10 +34,10 @@ h1, h2 {
     height: 100vh; /* Pełna wysokość ekranu */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Wyrównanie do środka */
+    justify-content: center; 
     align-items: center;
     text-align: center;
-    color: white; /* Aby tekst był widoczny na ciemnym tle */
+    color: white; 
 }
 
 .nav-links {
@@ -40,6 +49,7 @@ h1, h2 {
 }
 
 nav {
+    font-family: 'CustomFont', sans-serif;
     display: flex;
     justify-content: flex-start; 
     align-items: center;
