@@ -11,8 +11,8 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: #333;
+    background-color: white;
+    color: black;
 }
 
 .section {
@@ -25,13 +25,14 @@ h1, h2{
     text-align: left;
 }
 h1 {
-    font-family: "Sabon";
-    font-size: 45px;
+    font-family: "Univers";
+    font-size: 64px;
+    line-height: 1px;
 }
 
 
 h2{
-    font-size: 45px;
+    font-size: 60px;
     font-family: "Univers";
 }
 
@@ -65,8 +66,39 @@ h2{
 .portrait img {
     max-width: 300px;
     height: auto;
-    border-radius: 5%;
+    border-radius: 50%;
 }
+
+#about {
+    display: flex;
+    height: 100vh; /* Cała wysokość ekranu */
+    width: 100vw; /* Pełna szerokość ekranu */
+}
+
+/* Tekst po lewej */
+.aboutme {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    color: black;
+}
+
+/* Obraz jako background na prawej połowie */
+.aboutimg {
+    width: 50%; /* Połowa ekranu */
+    height: 100vh; /* Pełna wysokość ekranu */
+    background-image: url('images/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg');
+    background-size: cover;
+    background-position: center right; /* Upewnia się, że obraz dotyka prawej krawędzi */
+    background-repeat: no-repeat;
+}
+
+
+
+
 
 
 .nav-links {
