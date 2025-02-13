@@ -26,11 +26,14 @@ h1, h2{
     font-family: "Univers";
     font-size: 64px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
-
-
-
+#projects h1{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
 
 
   
@@ -41,14 +44,13 @@ h1, h2{
     background-repeat: no-repeat; 
     height: 100vh; 
     display: flex;
-    justify-content: space-between; /* Odstęp między tekstem a obrazem */
-    align-items: center; /* Wyśrodkowanie w pionie */
-    padding: 0 10%; /* Marginesy po bokach */
+    flex-wrap: wrap; /* ← dodane */
     justify-content: space-between; 
     align-items: center; 
     padding: 0 10%; 
     color: white; 
 }
+
 
 
 .bio {
@@ -71,8 +73,6 @@ h1, h2{
 
 #about {
     display: flex;
-    height: 100vh; /* Cała wysokość ekranu */
-    width: 100vw; /* Pełna szerokość ekranu */
     height: 100vh; 
     width: 100vw; 
 }
@@ -88,20 +88,17 @@ h1, h2{
     color: black;
 }
 
-/* Obraz jako background na prawej połowie */
+
 .aboutimg {
-    width: 50%; /* Połowa ekranu */
-    height: 100vh; /* Pełna wysokość ekranu */
     width: 50%; 
     height: 100vh; 
     background-image: url('images/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg');
     background-size: cover;
-    background-position: center right; /* Upewnia się, że obraz dotyka prawej krawędzi */
-    background-position: center right; 
+    background-position: center right;
     background-repeat: no-repeat;
 }
 
-/* Kontakt - Wyśrodkowanie */
+
 #contact {
     width: 50%;
     margin: auto;
@@ -109,22 +106,17 @@ h1, h2{
     padding: 80px 10%;
 }
 
-/* Nagłówek */
-h1 {
-    
-    font-weight: bold;
-    
-    margin-bottom: 20px;
-}
 
-/* Formularz */
+
+
+
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* Etykiety */
+
 label {
     font-weight: bold;
     font-size: 14px;
@@ -150,7 +142,7 @@ span {
     box-sizing: border-box; 
 }
 
-/* Inne pola formularza */
+
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -160,7 +152,7 @@ input, textarea {
     box-sizing: border-box;
 }
 
-/* Przycisk Submit */
+
 button {
     margin-top: 20px;
     padding: 15px;
@@ -178,7 +170,7 @@ button:hover {
     color: white;
 }
 
-/* Responsywność */
+
 @media (max-width: 768px) {
     #contact {
         width: 90%;
@@ -191,7 +183,7 @@ button:hover {
     .name-fields input {
         width: 100%; 
 }
-
+}
 
 
 
