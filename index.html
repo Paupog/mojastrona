@@ -9,26 +9,31 @@
       <title>Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-          <div class="logo">P.Pogwizd</div>
-          <ul class="nav-links">
+  <header>
+    <nav class="d-flex justify-content-between">
+        <div class="logo d-none d-sm-block">
+            <a href="#">
+                Paulina Pogwizd
+            </a>
+        </div>
+        <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
-          <div class="hamburger">
+        </ul>
+        <div class="hamburger">
             <span></span>
             <span></span>
             <span></span>
-          </div>
-        </nav>
-      </header>
+        </div>
+    </nav>
+</header>
+
    <main>
-    <section id="hero" >
+    <section id="hero" class="page-section" >
       <div class="bio">  
         <h1>Frontend</h1>
-        <h2>Developer</h2>
+        <h2>Developer.</h2>
         <p>Based in Copenhagen </p>
         
       </div>
@@ -36,16 +41,18 @@
         <img src="images/AvatarMaker (1).png" alt="">
       </div>
      </section>
-     <section id="about">
+     <section id="about" class="page-section">
       <div class="aboutme">
           <h1>A bit about me</h1>
           <h3>My name is Paulina...</h3>
-          <p>My career started in hospitality, where I learned the importance of efficiency, adaptability, and user experience—before I even knew those terms applied to web development. Now, I’m transitioning into frontend, driven by my passion for crafting clean interfaces and seamless interactions. With every project, I bring the same attention to detail and problem-solving skills that made me excel in hospitality, ensuring that every digital experience I create feels intuitive and effortless.</p>
+          <p>My career started in hospitality, where I learned the importance of efficiency, adaptability, and user experience—before I even knew those terms applied to web development.
+            <br/>
+             Now, I’m transitioning into frontend, driven by my passion for crafting clean interfaces and seamless interactions. With every project, I bring the same attention to detail and problem-solving skills that made me excel in hospitality, ensuring that every digital experience I create feels intuitive and effortless.</p>
       </div>
       <div class="aboutimg"></div>
   </section>
     
-    <section id="projects">
+    <section id="projects" class="page-section">
         <h1>Latest Projects</h1>
         <div class="container">
         <div class="row mb-5">
@@ -79,31 +86,13 @@
               <img src="images/Rectangle 2.png" alt="ai recipe generator " class="img-fluid"/>
           </div>
       </div>
-      <div class="row">
-          <div class="col d-none d-lg-block">
-              <img src="images/Rectangle 3.png" alt="copenhagen guide" class="img-fluid"/>
-          </div>
-          <div class="col">
-             <div class="project-description">
-                  <h2 class="mb-5">
-                    <a href="">Copenhagen Guide</a>
-                  </h2>
-                  <p class="mb-5 text-muted">
-                      The Weather App provides up-to-date weather information for your selected city. It displays temperature, weather conditions, and a forecast for the coming days in a clear and easy-to-read format. This app is essential for planning trips or daily activities.
-  
-                  </p>
-                  <a href="" class="btn btn-branding-outline mb-5"
-                  target="_blank">
-                  Launch project</a>
-          </div>
-          </div>
-      </div>
-    </div>
+        </div>
+      
         
     </section>
    
   
-  <section id="contact">
+  <section id="contact" class="page-section">
     <h1>Contact Me</h1>
 
     <form action="#" method="POST">

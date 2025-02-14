@@ -1,3 +1,4 @@
+/* ===== FONTS ===== */
 @font-face {
     font-family: 'Univers';
     src: url('font/univers/UniversCnRg.ttf') format('truetype');
@@ -8,11 +9,19 @@
     src: url('font/sabon/Sabon.ttf') format('opentype');
 }
 
-  body {
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* ===== GLOBAL STYLES ===== */
+body {
     margin: 0;
     padding: 0;
     background-color: white;
     color: black;
+    font-family: "Sabon", sans-serif;
 }
 
 .section {
@@ -21,47 +30,101 @@
     margin: auto;
 }
 
-h1, h2{
+h1, h2 {
     text-align: left;
-    font-family: "Univers";
     font-size: 64px;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: "Univers";
 }
 
-#projects h1{
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 50px;
+/* ===== HEADER & NAVIGATION ===== */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px; 
+    width: auto;
+    display: block;
 }
 
 
-  
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 50px;
+    padding-left: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #f5a623;
+}
+
+/* ===== HAMBURGER MENU (MOBILE) ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 13%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+}
+
+/* ===== HERO SECTION ===== */
 #hero {
     background-image: url('images/background3.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap; /* ← dodane */
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 0 10%; 
-    color: white; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+
 }
-
-
+#hero h1, h2 {
+    font-size: 74px !important;
+}
 
 .bio {
-    max-width: 50%; 
+    max-width: 50%;
 }
-
 
 .portrait {
     max-width: 50%;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     height: 40%;
 }
 
@@ -71,16 +134,17 @@ h1, h2{
     border-radius: 50%;
 }
 
+
+/* ===== ABOUT SECTION ===== */
 #about {
     display: flex;
-    height: 100vh; 
-    width: 100vw; 
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
 }
-
 
 .aboutme {
     width: 50%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,34 +152,64 @@ h1, h2{
     color: black;
 }
 
+.aboutme h1 {
+    line-height: 1.3;
+    margin-bottom: 70px;
+    margin-top: -50px;
+}
+
+.aboutme p{
+    line-height: 1.9;
+}
 
 .aboutimg {
-    width: 50%; 
-    height: 100vh; 
+    width: 50%;
+    min-height: 100vh;
     background-image: url('images/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg');
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
 }
 
+/* ===== PROJECTS SECTION ===== */
+#projects {
+    background-color: white;
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px;
+}
 
+#projects h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 60px;
+}
+
+#projects a {
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+#projects a:hover {
+    color: #f5a623;
+}
+
+/* ===== CONTACT SECTION ===== */
 #contact {
+    background-color: white;
     width: 50%;
     margin: auto;
     text-align: left;
     padding: 80px 10%;
 }
 
-
-
-
-
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 
 label {
     font-weight: bold;
@@ -130,18 +224,17 @@ span {
 .name-fields {
     display: flex;
     gap: 10px;
-    width: 100%; 
+    width: 100%;
 }
 
 .name-fields input {
-    flex: 1; 
+    flex: 1;
     padding: 12px;
     font-size: 14px;
     border: 1px solid #ddd;
     background-color: #f7f7f7;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
-
 
 input, textarea {
     width: 100%;
@@ -151,7 +244,6 @@ input, textarea {
     background-color: #f7f7f7;
     box-sizing: border-box;
 }
-
 
 button {
     margin-top: 20px;
@@ -170,89 +262,9 @@ button:hover {
     color: white;
 }
 
-
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-    #contact {
-        width: 90%;
-    }
-
-    .name-fields {
-        flex-direction: column; 
-    }
-
-    .name-fields input {
-        width: 100%; 
-}
-}
-
-
-
-
-
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin-left: 50px; 
-    padding-left: 0; 
-}
-
-nav {
-    font-family: "Univers";
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center;
-    padding: 20px 5%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 45px;
-}
-
-
-
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: lighter;
-    transition: 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #f5a623; 
-}
-
-
-
-.hamburger {
-    display: none; 
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    position: absolute;
-    right: 13%; 
-    top: 50%;
-    transform: translateY(-50%); 
-}
-
-
-.hamburger span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: white;
-}
-
-
-@media (max-width: 768px) {
+    /* Mobile Navbar */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -270,5 +282,18 @@ nav {
 
     .hamburger {
         display: flex;
+    }
+
+    /* Contact Section */
+    #contact {
+        width: 90%;
+    }
+
+    .name-fields {
+        flex-direction: column;
+    }
+
+    .name-fields input {
+        width: 100%;
     }
 }
