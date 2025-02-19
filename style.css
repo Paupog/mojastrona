@@ -153,48 +153,120 @@ nav {
     text-align: center;
     padding: 50px 20px;
     background-color: #f8f8f8;
-  }
+    
+}
 
-  .projects-container {
+#projects h2 {
+    font-size: 64px;
+    font-family: 'Ysabeau', sans-serif;
+    margin-bottom: 50px; 
+    margin-top: 60px;
+}
+.gallery-wrapper {
+    position: relative; 
+    max-width: 1200px; 
+    margin: 60px auto; 
     display: flex;
-    gap: 30px;
-    overflow-x: auto; /* Pozwala na przesuwanie */
-    scroll-snap-type: x mandatory;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+.projects-container {
+    display: flex;
+    gap: 40px; 
+    overflow: hidden;
     padding: 20px;
-    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 1040px; 
+}
 
-  }
-  .projects-container::-webkit-scrollbar {
-    height: 8px;
-  }
-  .projects-container::-webkit-scrollbar-track {
-    background: #ddd;
-    border-radius: 10px;
-  }
-  .projects-container::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
+.project-item {
+    flex: 0 0 300px; 
+    text-align: center;
+}
 
-  .projects-container a {
-    scroll-snap-align: start;
+
+.project-item a {
     display: block;
-    flex: 0 0 auto;
-    width: 300px;
+    width: 100%;
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.3s;
-  }
-  
-  .projects-container img {
+}
+
+.project-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .projects-container a:hover {
+}
+
+.project-item a:hover {
     transform: scale(1.05);
-  }
+}
+
+.project-item h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Ysabeau', sans-serif;
+}
+
+.project-item p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+/* Arrows */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background-color: black; 
+    transform: scale(1.2); 
+
+
   
 
 /* ===== CONTACT SECTION ===== */

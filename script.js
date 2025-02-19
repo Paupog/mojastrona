@@ -28,3 +28,63 @@ document.addEventListener("wheel", (event) => {
     }, 1500);
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".projects-container");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    nextBtn.addEventListener("click", () => {
+        container.scrollBy({ left: 350, behavior: "smooth" });
+    });
+
+    prevBtn.addEventListener("click", () => {
+        container.scrollBy({ left: -350, behavior: "smooth" });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".projects-container");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    const dots = document.querySelectorAll(".dot");
+
+    let currentIndex = 0;
+    const projectWidth = 340; // Szerokość projektu + gap
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    }
+
+    nextBtn.addEventListener("click", () => {
+        if (currentIndex < dots.length - 1) {
+            currentIndex++;
+            container.scrollBy({ left: projectWidth, behavior: "smooth" });
+            updateDots();
+        }
+    });
+
+    prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            container.scrollBy({ left: -projectWidth, behavior: "smooth" });
+            updateDots();
+        }
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            currentIndex = index;
+            container.scrollTo({ left: projectWidth * currentIndex, behavior: "smooth" });
+            updateDots();
+        });
+    });
+
+    updateDots();
+});
+
+
