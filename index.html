@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@400;700&display=swap" rel="stylesheet">
+
 
       <title>Portfolio</title>
 </head>
 <body>
   <header>
-    <nav class="d-flex justify-content-between">
-        <div class="logo d-none d-sm-block">
-            <a href="#">
-                Paulina Pogwizd
-            </a>
-        </div>
+    <nav class="d-flex justify-content-center">
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -31,20 +28,20 @@
 
    <main>
     <section id="hero" class="page-section" >
-      <div class="bio">  
-        <h1>Frontend</h1>
-        <h2>Developer.</h2>
-        <p>Based in Copenhagen </p>
-        
+      <div class="name"><h1>Paulina Pogwizd</h1></div>
+      
+        <div class="portrait">
+          <img src="images/Avatar.png" alt="">
+        </div>
+        <div class="bio">  
+        <h2>Frontend Developer</h2>  
       </div>
-      <div class="portrait">
-        <img src="images/AvatarMaker (1).png" alt="">
-      </div>
+      
      </section>
      <section id="about" class="page-section">
       <div class="aboutme">
           <h1>A bit about me</h1>
-          <h3>My name is Paulina...</h3>
+         
           <p>My career started in hospitality, where I learned the importance of efficiency, adaptability, and user experience—before I even knew those terms applied to web development.
             <br/>
              Now, I’m transitioning into frontend, driven by my passion for crafting clean interfaces and seamless interactions. With every project, I bring the same attention to detail and problem-solving skills that made me excel in hospitality, ensuring that every digital experience I create feels intuitive and effortless.</p>
@@ -52,45 +49,27 @@
       <div class="aboutimg"></div>
   </section>
     
-    <section id="projects" class="page-section">
-        <h1>Latest Projects</h1>
-        <div class="container">
-        <div class="row mb-5">
-          <div class="col d-none d-lg-block">
-              <img src="images/Rectangle 1.png" alt="React app img" class="img-fluid"/>
-          </div>
-          <div class="col">
-             <div class="project-description">
-                  <h2 class="mb-5">
-                    <a href="https://react-weathapp.netlify.app/" target="_blank">React Weather App</a>
-                    </h2>
-                  <p class="mb-5 text-muted">
-                      The AI Recipes Generator is an app that helps create vegetarian recipes based on the ingredients you have in your fridge. Simply input the available items, and the app will generate creative and healthy meal ideas. It's the perfect solution for minimizing food waste and finding culinary inspiration. </p>
-                  
-          </div>
-          </div>
-      </div>
-      <div class="row mb-5">
-         
-          <div class="col">
-             <div class="project-description">
-                  <h2 class="mb-5">
-                    <a href="https://recipesgenerator.netlify.app/" target="_blank">AI Recipe Generator</a>
-                    </h2>
-                  <p class="mb-5 text-muted">
-                      The World Clock is a tool that allows you to check the exact time in various time zones around the world. With its intuitive interface, you can quickly select the locations you’re interested in and track the time in real time. This app is ideal for people working with international teams or frequent travelers.  </p>
-                  
-          </div>
-          </div>
-           <div class="col d-none d-lg-block">
-              <img src="images/Rectangle 2.png" alt="ai recipe generator " class="img-fluid"/>
-          </div>
-      </div>
-        </div>
-      
-        
-    </section>
-   
+  <section id="projects" class="page-section" >
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <a href="https://react-weathapp.netlify.app/" target="_blank">
+        <img src="images/icons/1.png" alt="Weather app react">
+      </a>
+      <a href="https://recipesgenerator.netlify.app/" target="_blank">
+        <img src="images/icons/2.png" alt="recipe app ">
+      </a>
+      <a href="https://seecopenhagen.netlify.app/" target="_blank">
+        <img src="images/icons/3.png" alt="Copenhagen guide">
+      </a>
+      <a href="https://world-clocken.netlify.app/" target="_blank">
+        <img src="images/icons/4.png" alt="World clock">
+      </a>
+      <a href="https://pog-odapp.netlify.app/" target="_blank">
+        <img src="images/icons/5.png" alt="Weather App">
+      </a>
+    </div>
+  </section>
+  
   
   <section id="contact" class="page-section">
     <h1>Contact Me</h1>
