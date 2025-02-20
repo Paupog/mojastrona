@@ -4,10 +4,10 @@ document.querySelector(".hamburger").addEventListener("click", function() {
 
 const sections = document.querySelectorAll(".page-section");
 let currentSection = 0;
-let isScrolling = false; // Blokada, żeby nie przewijało za dużo na raz
+let isScrolling = false; 
 
 document.addEventListener("wheel", (event) => {
-    if (isScrolling) return; // Jeśli już trwa przewijanie, ignoruj kolejne scrollowanie
+    if (isScrolling) return; 
     isScrolling = true;
 
     if (event.deltaY > 0 && currentSection < sections.length - 1) {
@@ -24,7 +24,7 @@ document.addEventListener("wheel", (event) => {
     });
 
     setTimeout(() => {
-        isScrolling = false; // Odblokuj scroll po zakończeniu animacji
+        isScrolling = false; 
     }, 1500);
 });
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dots = document.querySelectorAll(".dot");
 
     let currentIndex = 0;
-    const projectWidth = 340; // Szerokość projektu + gap
+    const projectWidth = 340; 
 
     function updateDots() {
         dots.forEach((dot, index) => {
